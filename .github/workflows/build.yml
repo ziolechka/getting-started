@@ -17,4 +17,4 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: iliusa77/docker-getting-started:latest
+        tags: ziolechka/docker-getting-started:latest
