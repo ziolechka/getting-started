@@ -18,3 +18,12 @@ jobs:
       with:
         push: true
         tags: ziolechka/docker-getting-started:latest
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Connect to Vagrant and execute uname
+      run: |
+         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 14414 "uname"
+         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 14414 "uptime"
+      shell: bash
