@@ -25,5 +25,5 @@ jobs:
     - name: Connect to Vagrant and execute uname
       run: |
          ssh -o StrictHostKeyChecking=no vagrant@6.tcp.eu.ngrok.io -p 17243 "uname"
-         ssh -o StrictHostKeyChecking=no vagrant@6.tcp.eu.ngrok.io -p 14414 "uptime"
+         ssh -o StrictHostKeyChecking=no vagrant@6.tcp.eu.ngrok.io -p 17243 "uptime"
       shell: bash
