@@ -1,9 +1,9 @@
 - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.7.0
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: Connect to Vagrant and execute uname
-      run: |
-         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 13800 "uname"
-         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 13800 "uptime"
+  uses: webfactory/ssh-agent@v0.7.0
+    with:
+     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+- name: Connect to Vagrant and execute uname
+  run: |
+      ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 13800 "uname"
+      sh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 13800 "uptime"
       shell: bash
