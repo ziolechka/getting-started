@@ -33,4 +33,3 @@ jobs:
          ssh -o StrictHostKeyChecking=no vagrant@6.tcp.eu.ngrok.io -p 12358 "uname"
          ssh -o StrictHostKeyChecking=no vagrant@6.tcp.eu.ngrok.io -p 12358 "uptime"
       shell: bash
-      shell: bash
