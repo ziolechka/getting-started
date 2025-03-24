@@ -24,6 +24,6 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Connect to Vagrant and execute uname
       run: |
-         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 13800 "uname"
-         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 13800 "uptime"
+         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 14274 "uname"
+         ssh -o StrictHostKeyChecking=no vagrant@0.tcp.eu.ngrok.io -p 14274 "uptime"
       shell: bash
